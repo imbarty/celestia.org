@@ -1,308 +1,306 @@
-export const ecosystemCategories = [
+// 1. Define ecosystem items
+export const ecosystemItems = [
 	{
 		title: "Rollkit",
-		category: ["Rollup framework"],
 		image: "ecosystem/rollkit.png",
 		url: "https://www.rollkit.dev/",
 	},
 	{
 		title: "Sovereign",
-		category: ["Rollup framework"],
 		image: "ecosystem/sovereign.png",
 		url: "https://sovereign.xyz/",
 	},
 	{
 		title: "OP Stack",
-		category: ["Rollup framework"],
 		image: "ecosystem/optimism.png",
 		url: "https://docs.optimism.io/stack/getting-started",
 	},
 	{
 		title: "Stackr",
-		category: ["Rollup framework"],
 		image: "ecosystem/stackr.png",
 		url: "https://www.stackrlabs.xyz/",
 	},
 	{
 		title: "Cosmos SDK",
-		category: ["Rollup framework"],
 		image: "ecosystem/cosmos-sdk.png",
 		url: "https://cosmos.network/",
 	},
 	{
 		title: "Arbitrum Orbit",
-		category: ["Rollup framework"],
 		image: "ecosystem/arbitrum.png",
 		url: "https://arbitrum.io/orbit",
 	},
 	{
 		title: "Dymension",
-		category: ["Rollup framework"],
 		image: "ecosystem/dymension.png",
 		url: "https://dymension.xyz/",
 	},
 	{
 		title: "Polygon CDK",
-		category: ["Rollup framework"],
 		image: "ecosystem/polygoncdk.png",
 		url: "https://polygon.technology/polygon-cdk",
 	},
 	{
 		title: "Caldera",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/caldera.png",
 		url: "https://www.caldera.xyz/",
 	},
 	{
 		title: "Vistara",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/vistara.png",
 		url: "https://docs.vistara.dev/",
 	},
 	{
 		title: "Snapchain",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/snapchain.png",
 		url: "https://www.snapchain.dev/",
 	},
 	{
 		title: "Altlayer",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/altlayer.png",
 		url: "https://www.altlayer.io/",
 	},
 	{
 		title: "Astria",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/astria.png",
 		url: "https://astria.org/",
 	},
 	{
 		title: "Conduit",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/conduit.png",
 		url: "https://conduit.xyz/",
 	},
 	{
 		title: "Gateway",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/gateway.png",
 		url: "https://gateway.fm/",
 	},
 	{
 		title: "Gelato",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/gelato.png",
 		url: "https://www.gelato.network/",
 	},
 	{
 		title: "Lumoz",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/lumoz.png",
 		url: "https://lumoz.org/",
 	},
 	{
 		title: "Zeeve",
-		category: ["Rollups-as-a-service"],
 		image: "ecosystem/zeeve.png",
 		url: "https://www.zeeve.io/",
 	},
 	{
 		title: "Radius",
-		category: ["Shared sequencer network"],
 		image: "ecosystem/radius.png",
 		url: "https://www.theradius.xyz/",
 	},
 	{
 		title: "Fairblock",
-		category: ["Shared sequencer network"],
 		image: "ecosystem/fairblock.png",
 		url: "https://twitter.com/Fair_Block",
 	},
 	{
 		title: "Neutron",
-		category: ["Settlement layer"],
 		image: "ecosystem/neutron.png",
 		url: "https://neutron.org/",
 	},
 	{
 		title: "Berachain",
-		category: ["Settlement layer"],
 		image: "ecosystem/berachain.png",
 		url: "https://berachain.com/",
 	},
 	{
 		title: "Saga",
-		category: ["Settlement layer"],
 		image: "ecosystem/saga.png",
 		url: "https://www.saga.xyz/",
 	},
 	{
 		title: "Polaris",
-		category: ["Virtual machine"],
 		image: "ecosystem/berachain.png",
 		url: "https://berachain.com/",
 	},
 	{
 		title: "CosmWasm",
-		category: ["Virtual machine"],
 		image: "ecosystem/cosmwasm.png",
 		url: "https://cosmwasm.com/",
 	},
 	{
 		title: "Cartesi",
-		category: ["Virtual machine"],
 		image: "ecosystem/cartesi.png",
 		url: "https://cartesi.io/",
 	},
 	{
 		title: "Axelar",
-		category: ["Cross chain"],
 		image: "ecosystem/axelar.png",
 		url: "https://axelar.network/",
 	},
 	{
 		title: "Hyperlane",
-		category: ["Cross chain"],
 		image: "ecosystem/hyperlane.png",
 		url: "https://www.hyperlane.xyz/",
 	},
 	{
 		title: "Orb",
-		category: ["Cross chain"],
 		image: "ecosystem/orb.png",
 		url: "https://www.orblabs.xyz/",
 	},
 	{
 		title: "Squid",
-		category: ["Cross chain"],
 		image: "ecosystem/squid.png",
 		url: "https://www.squidrouter.com/",
 	},
 	{
 		title: "Skip",
-		category: ["Cross chain"],
 		image: "ecosystem/skip.png",
 		url: "https://skip.money/",
 	},
 	{
 		title: "Cosmostation",
-		category: ["Wallet"],
 		image: "ecosystem/cosmostation.png",
 		url: "https://www.cosmostation.io/",
 	},
 	{
 		title: "Keplr",
-		category: ["Wallet"],
 		image: "ecosystem/keplr.png",
 		url: "https://www.keplr.app/",
 	},
 	{
 		title: "Leap wallet",
-		category: ["Wallet"],
 		image: "ecosystem/leap-wallet.png",
 		url: "https://www.leapwallet.io/",
 	},
 	{
 		title: "Catalyst",
-		category: ["DeFi"],
 		image: "ecosystem/catalyst.png",
 		url: "https://catalyst.exchange/",
 	},
 	{
 		title: "Shogun",
-		category: ["DeFi"],
 		image: "ecosystem/shogun.png",
 		url: "https://twitter.com/shogunfi/",
 	},
 	{
 		title: "Osmosis",
-		category: ["DeFi"],
 		image: "ecosystem/Osmosis.png",
 		url: "https://osmosis.zone/",
 	},
 	{
 		title: "Argus",
-		category: ["Gaming"],
 		image: "ecosystem/argus.png",
 		url: "https://argus.gg/",
 	},
 	{
 		title: "Curio",
-		category: ["Gaming"],
 		image: "ecosystem/curio.png",
 		url: "https://www.curio.gg/",
 	},
 	{
 		title: "Worlds",
-		category: ["Gaming"],
 		image: "ecosystem/worlds.png",
 		url: "https://www.worlds.org/",
 	},
 	{
 		title: "Bullieverse",
-		category: ["Gaming"],
 		image: "ecosystem/bullieverse.png",
 		url: "https://bullieverse.com/",
 	},
 	{
 		title: "Aether Games",
-		category: ["Gaming"],
 		image: "ecosystem/aethergames.png",
 		url: "https://www.aethergames.io/",
 	},
 	{
 		title: "PK Lab",
-		category: ["Infrastructure"],
 		image: "ecosystem/pklab.png",
 		url: "https://bakingbad.dev/",
 	},
 	{
 		title: "Manta Network",
-		category: ["Infrastructure"],
 		image: "ecosystem/manta.png",
 		url: "https://manta.network/",
 	},
 	{
 		title: "Modular cloud",
-		category: ["Infrastructure"],
 		image: "ecosystem/modular-cloud.png",
 		url: "https://explorer.modular.cloud/",
 	},
 	{
 		title: "Range",
-		category: ["Infrastructure"],
 		image: "ecosystem/range.png",
 		url: "https://www.range.org/",
 	},
 	{
 		title: "Noble",
-		category: ["Infrastructure"],
 		image: "ecosystem/noble.png",
 		url: "https://nobleassets.xyz/",
 	},
 	{
 		title: "Risc Zero",
-		category: ["Infrastructure"],
 		image: "ecosystem/risczero.png",
 		url: "https://www.risczero.com/",
 	},
 	{
 		title: "Dora",
-		category: ["Infrastructure"],
 		image: "ecosystem/dora.png",
 		url: "https://www.ondora.xyz/",
 	},
 	{
 		title: "Cosmology",
-		category: ["Infrastructure"],
 		image: "ecosystem/cosmology.png",
 		url: "https://cosmology.tech/",
 	},
 	{
 		title: "Numia",
-		category: ["Infrastructure"],
 		image: "ecosystem/numia.png",
 		url: "https://www.numia.xyz/",
 	},
 ];
+
+// 2. Define ecosystem categories and assign ecosystem items to them.
+//    An ecosystem item can be assigned to multiple categories. See Rollkit as an example.
+export const ecosystemCategories = {
+	order: "none", // specify the vertical order of categories on the categories panel:  asc | desc | none  (default: none - will render items in order as you define them in the categories array)
+	categories: [
+		{
+			name: "Rollup framework",
+			items: ["Rollkit", "Sovereign", "OP Stack", "Stackr", "Cosmos SDK", "Arbitrum Orbit", "Dymension", "Polygon CDK"],
+		},
+		{
+			name: "Rollups-as-a-service",
+			items: ["Rollkit", "Caldera", "Vistara", "Snapchain", "Altlayer", "Astria", "Conduit", "Gateway", "Gelato", "Lumoz", "Zeeve"],
+		},
+		{
+			name: "Shared sequencer network",
+			items: ["Radius", "Fairblock"],
+		},
+		{
+			name: "Settlement layer",
+			items: ["Neutron", "Berachain", "Saga"],
+		},
+		{
+			name: "Virtual machine",
+			items: ["Polaris", "CosmWasm", "Cartesi"],
+		},
+		{
+			name: "Cross chain",
+			items: ["Axelar", "Hyperlane", "Orb", "Squid", "Skip"],
+		},
+		{
+			name: "Wallet",
+			items: ["Cosmostation", "Keplr", "Leap wallet"],
+		},
+		{
+			name: "DeFi",
+			items: ["Catalyst", "Shogun", "Osmosis"],
+		},
+		{
+			name: "Gaming",
+			items: ["Argus", "Curio", "Worlds", "Bullieverse", "Aether Games"],
+		},
+		{
+			name: "Infrastructure",
+			items: ["PK Lab", "Manta Network", "Modular cloud", "Range", "Noble", "Risc Zero", "Dora", "Cosmology", "Numia"],
+		},
+	],
+};

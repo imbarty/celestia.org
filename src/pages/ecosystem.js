@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ecosystemCategories } from "../datas/ecosystem/ecosystems";
+import { ecosystemItems, ecosystemCategories } from "../datas/ecosystem/ecosystems";
 import { FooterBoxes } from "../datas/ecosystem/content";
 import Layout from "../components/layout";
 import { useState } from "react";
@@ -10,12 +10,9 @@ import Seo from "../components/seo";
 
 const EcosystemPage = () => {
 	const [selectedCategory, setSelectedCategory] = useState("all");
-	const [search, setSearch] = useState(false);
+	const [search, setSearch] = useState("");
 	const [open, setOpen] = useState(false);
-	var ecosystems = [];
 	const searchInputRef = React.useRef(null);
-
-	const allUniqueCategories = [...new Set(ecosystemCategories.flatMap((item) => item.category))];
 
 	function searchApp(e) {
 		e.preventDefault();
@@ -32,19 +29,19 @@ const EcosystemPage = () => {
 		}
 	}
 
-	ecosystemCategories.forEach(function (ecosystem) {
-		ecosystems.push({ details: ecosystem, category: ecosystem.category });
+	// Map each ecosystem item to its categories
+	const itemsWithCategories = ecosystemItems.map((item) => {
+		const categories = ecosystemCategories.categories.filter((category) => category.items.includes(item.title)).map((category) => category.name);
+		return { ...item, categories };
 	});
 
-	function sortByKey(array, key) {
-		return array.sort(function (a, b) {
-			var x = a.details[key];
-			var y = b.details[key];
-			return x < y ? -1 : x > y ? 1 : 0;
-		});
+	// Sort categories based on the order property
+	let sortedCategories = [...ecosystemCategories.categories];
+	if (ecosystemCategories.order === "asc") {
+		sortedCategories.sort((a, b) => a.name.localeCompare(b.name));
+	} else if (ecosystemCategories.order === "desc") {
+		sortedCategories.sort((a, b) => b.name.localeCompare(a.name));
 	}
-
-	sortByKey(ecosystems, "title");
 
 	return (
 		<Layout footerBoxes={FooterBoxes}>
@@ -101,19 +98,19 @@ const EcosystemPage = () => {
 													)}
 												</div>
 											</li>
-											{allUniqueCategories.map(function (category) {
+											{sortedCategories.map(function (category) {
 												return (
-													<li className={`${selectedCategory === category ? "selected" : ""}`}>
+													<li className={`${selectedCategory === category.name ? "selected" : ""}`}>
 														<div
-															onClick={() => openCategorySelector(category)}
+															onClick={() => openCategorySelector(category.name)}
 															onKeyDown={(e) => {
-																if (e.key === "Enter") openCategorySelector(category);
+																if (e.key === "Enter") openCategorySelector(category.name);
 															}}
 															tabIndex={0}
 															role='button'
 														>
-															{category}
-															{selectedCategory === category && (
+															{category.name}
+															{selectedCategory === category.name && (
 																<svg
 																	id={"mobile-category"}
 																	viewBox='0 0 22 22'
@@ -156,16 +153,16 @@ const EcosystemPage = () => {
 									</div>
 								</div>
 								<div className={"row"}>
-									{ecosystemCategories
+									{itemsWithCategories
 										.filter(
-											(item) =>
-												(selectedCategory === "all" || item.category.includes(selectedCategory)) &&
-												(!search || item.title.toLowerCase().includes(search))
+											(ecosystem) =>
+												(selectedCategory === "all" || ecosystem.categories.includes(selectedCategory)) &&
+												(!search || ecosystem.title.toLowerCase().includes(search))
 										)
-										.sort((a, b) => a.title.localeCompare(b.title)) // Add this line
-										.map((item, index) => (
+										.sort((a, b) => a.title.localeCompare(b.title))
+										.map((ecosystem, index) => (
 											<div className={"col-12 col-sm-6 col-lg-6 col-xl-4 p-1"} key={index}>
-												<Ecosystem category={item.category} ecosystem={item} />
+												<Ecosystem ecosystem={ecosystem} />
 											</div>
 										))}
 								</div>
