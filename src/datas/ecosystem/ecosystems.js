@@ -432,7 +432,7 @@ export const ecosystemCategories = {
 	categories: [
 		{
 			name: "Rollups",
-			items: ["Alpha Dune", "AsMatch", "Astria", "Curio", "Dark Frontier", "Deri", "Eclipse", "Forma", "Hokum", "Kinto", "Last L2", LightLink", "Manta Network", "Movement Labs", "Ojo", "Paima Studios", "Pocket Network", "Shogun", "Syndr", "UniDex", "Waev", "Zeko", "ZKFair"],
+			items: ["Alpha Dune", "AsMatch", "Astria", "Curio", "Dark Frontier", "Deri", "Eclipse", "Forma", "Hokum", "Kinto", "Last L2", "LightLink", "Manta Network", "Movement Labs", "Ojo", "Paima Studios", "Pocket Network", "Shogun", "Syndr", "UniDex", "Waev", "Zeko", "ZKFair"],
 		},
 		{
 			name: "Rollups-as-a-service",
