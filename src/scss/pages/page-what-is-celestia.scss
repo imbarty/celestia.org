@@ -31,6 +31,10 @@
 		}
 	}
 
+	main {
+		padding: 0;
+	}
+
 	.lead-text {
 		font-family: $inter;
 		font-size: 18px;
@@ -132,8 +136,14 @@
 		}
 	}
 
+	.hero-section {
+		padding: 80px 0 60px 0;
+		h1 {
+			margin-bottom: 0px;
+		}
+	}
+
 	.tell-me-about-celestia {
-		margin-bottom: 80px;
 		padding: 0;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 70px;
@@ -151,8 +161,7 @@
 	}
 
 	.what-is-a-modular-blockchain {
-		margin-bottom: 80px;
-		padding: 0;
+		padding: 100px 0 0 0;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 70px;
 			padding-top: 40px;
@@ -163,8 +172,7 @@
 	}
 
 	.data-availability-sampling {
-		margin-bottom: 80px;
-		padding: 0;
+		padding: 100px 0 0 0;
 		.image-box--different {
 			padding: 0 30px;
 		}
@@ -181,8 +189,7 @@
 	}
 
 	.what-is-data-availability {
-		margin-bottom: 80px;
-		padding: 0;
+		padding: 100px 0 0 0;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 70px;
 		}
@@ -251,7 +258,7 @@
 	}
 
 	.whats-it-like-to-build-on-Celestia {
-		padding: 0 0 100px 0;
+		padding: 80px 0 0 0;
 		@include media-breakpoint-down(sm) {
 			padding: 0 0 80px 0;
 		}
@@ -676,6 +683,7 @@
 }
 
 .what-is-celestia + footer {
+	z-index: -1;
 	@include media-breakpoint-down(lg) {
 		padding-top: 400px;
 	}
