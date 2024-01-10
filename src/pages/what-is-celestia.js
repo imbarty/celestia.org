@@ -153,23 +153,25 @@ const WhatIsCelestia = () => {
 											<div className={"row align-items-center gy-3"}>
 												<div className={"col-12"}>
 													<div className={"why-use-card"}>
-														<h3 className={"why-use-title"}>Start fast</h3>
+														<h3 className={"why-use-title"}>Deploy fast</h3>
 														<p className={"why-use-text"}>
-															Deploy your own blockchain in minutes, as easy as a smart contract.
+															Deploy your own customizable blockchain as easily as a smart contract.
 														</p>
 													</div>
 												</div>
 												<div className={"col-12"}>
 													<div className={"why-use-card"}>
 														<h3 className={"why-use-title"}>Use any VM</h3>
-														<p className={"why-use-text"}>Unlock unique application features and use-cases.</p>
+														<p className={"why-use-text"}>
+															Transform nearly any virtual machine into your own sovereign chain.
+														</p>
 													</div>
 												</div>
 												<div className={"col-12"}>
 													<div className={"why-use-card"}>
-														<h3 className={"why-use-title"}>Access dynamic throughput</h3>
+														<h3 className={"why-use-title"}>Access abundant throughput</h3>
 														<p className={"why-use-text"}>
-															Lower costs and support more users and your application grows.
+															Unlock dynamic throughput that scales with the number of users.
 														</p>
 													</div>
 												</div>
@@ -192,7 +194,7 @@ const WhatIsCelestia = () => {
 									</div>
 									<div className='link-wrapper'>
 										<a className='link' href='https://celestia.org/build/' target='_blank' rel='noreferrer'>
-											Find out what you can build
+											Build modular
 											<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'>
 												<path
 													stroke='#7B2BF9'
