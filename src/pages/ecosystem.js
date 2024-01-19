@@ -13,6 +13,7 @@ const EcosystemPage = () => {
 	const [search, setSearch] = useState("");
 	const [open, setOpen] = useState(false);
 	const searchInputRef = React.useRef(null);
+	const scrollToRef = React.useRef(null);
 
 	function searchApp(e) {
 		e.preventDefault();
@@ -44,9 +45,11 @@ const EcosystemPage = () => {
 	}
 
 	React.useEffect(() => {
-		window.scrollTo({ top: 0, behavior: "smooth" });
+		if (scrollToRef.current) {
+			const top = scrollToRef.current.offsetTop - 40;
+			window.scrollTo({ top, behavior: "smooth" });
+		}
 	}, [selectedCategory]);
-
 	return (
 		<Layout footerBoxes={FooterBoxes}>
 			<Seo title={seoContent.title} description={seoContent.description} ogTitle={seoContent.ogTitle} image={seoContent.image} />
@@ -60,7 +63,7 @@ const EcosystemPage = () => {
 							</div>
 						</div>
 
-						<div className={"row my-2 pt-2 pt-lg-5 my-lg-5 pb-3"}>
+						<div ref={scrollToRef} className={"row my-2 pt-2 pt-lg-5 my-lg-5 pb-3"}>
 							<div className={"col-12"}>
 								<div className={"row"}>
 									<div className='col-12 col-md-8'>
