@@ -87,7 +87,7 @@ const Header = () => {
 
 	useEffect(() => {
 		const toggleHeaderClass = () => {
-			if (window.scrollY > 130) {
+			if (window.scrollY > 80) {
 				setIsBlur(true);
 			} else if (window.scrollY < 80) {
 				setIsBlur(false);

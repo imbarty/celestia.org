@@ -28,6 +28,14 @@ const EcosystemPage = () => {
 		if (!open && searchInputRef.current) {
 			searchInputRef.current.value = "";
 		}
+
+		// Perform the scroll after the state has been updated
+		setTimeout(() => {
+			if (scrollToRef.current) {
+				const top = scrollToRef.current.offsetTop - 40;
+				window.scrollTo({ top, behavior: "smooth" });
+			}
+		}, 0); // Timeout ensures this runs after the state updates
 	}
 
 	// Map each ecosystem item to its categories
@@ -44,12 +52,12 @@ const EcosystemPage = () => {
 		sortedCategories.sort((a, b) => b.name.localeCompare(a.name));
 	}
 
-	React.useEffect(() => {
-		if (scrollToRef.current) {
-			const top = scrollToRef.current.offsetTop - 40;
-			window.scrollTo({ top, behavior: "smooth" });
-		}
-	}, [selectedCategory]);
+	// React.useEffect(() => {
+	// 	if (scrollToRef.current) {
+	// 		const top = scrollToRef.current.offsetTop - 40;
+	// 		window.scrollTo({ top, behavior: "smooth" });
+	// 	}
+	// }, [selectedCategory]);
 	return (
 		<Layout footerBoxes={FooterBoxes}>
 			<Seo title={seoContent.title} description={seoContent.description} ogTitle={seoContent.ogTitle} image={seoContent.image} />
@@ -167,7 +175,19 @@ const EcosystemPage = () => {
 									</div>
 									<div className={"col-12 col-md-4"}>
 										<div className={"search-input"}>
-											<input ref={searchInputRef} type='text' id={"search"} placeholder={"Search app"} onKeyUp={searchApp} />
+											<input
+												ref={searchInputRef}
+												type='text'
+												id={"search"}
+												placeholder={"Search app"}
+												onKeyUp={searchApp}
+												onClick={() => {
+													if (scrollToRef.current) {
+														const top = scrollToRef.current.offsetTop - 40;
+														window.scrollTo({ top, behavior: "smooth" });
+													}
+												}}
+											/>
 										</div>
 									</div>
 								</div>
