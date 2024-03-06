@@ -102,12 +102,12 @@ const IndexPage = () => {
 								<div className='flex flex-column col-12 col-lg-4 d-flex justify-content-center'>
 									<h3 className='title mb-4'>Argus</h3>
 									<p className='text'>
-										World Engine provides the foundation for game developers to build and customize their own open and
-										interoperable game worlds.
+										Argus develops the World Engine, an onchain game engine that makes it easy for developers to build
+										and scale performance-intensive onchain games with Celestia underneath.
 									</p>
 								</div>
 								<div className='col-12 col-lg-8 mb-4 mb-lg-0'>
-									<StaticImage className='image-right' src='../images/gaming/game-1.jpg' />
+									<StaticImage className='image-right' src='../images/gaming/dark-frontier.jpg' />
 								</div>
 							</div>
 							<div className='row flex-column flex-lg-row'>
