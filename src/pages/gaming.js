@@ -128,13 +128,13 @@ const IndexPage = () => {
 						<div className={"container"}>
 							<div className='row flex-column flex-lg-row mb-5'>
 								<div className='title-col flex flex-column col-12 col-lg-6 d-flex justify-content-center'>
-									<h2 className='with-decor mb-4'>Unlock capabilities</h2>
+									<h2 className='with-decor mb-4'>Truly Autonomous Worlds</h2>
 									<p className='text'>
 										Find the ideal modular stack that meets the scaling, flexibility, and sustainability requirements for your
 										game.
 									</p>
 									<div className='button-wrapper mt-3'>
-										<Button class={"simple"} type={"external"} text={"Level up"} url={"/"} />
+										<Button class={"simple"} type={"external"} text={"Level up"} url={"/build/"} />
 									</div>
 								</div>
 								<div className='col-12 col-lg-6 mt-5 mt-lg-0'>
