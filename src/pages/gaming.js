@@ -117,8 +117,8 @@ const IndexPage = () => {
 								<div className='flex flex-column col-12 col-lg-4 d-flex justify-content-center'>
 									<h3 className='title mb-4'>Curio</h3>
 									<p className='text'>
-										Curio is the maker of Keystone - a rollup SDK for games focused on performance and composability. Keystone
-										powers their upcoming social strategy game and many more to come in the modular ecosystem.
+										Curio is a gaming studio building Keystone, an engine that allows developers to create games where
+										players can co-create new governance structures and economic systems, starting with their own social strategy title. 
 									</p>
 								</div>
 							</div>
