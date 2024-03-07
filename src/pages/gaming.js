@@ -97,13 +97,13 @@ const IndexPage = () => {
 					</section>
 					<section className={"games-section"}>
 						<div className={"container"}>
-							<h2 className='with-decor mb-5'>Games using the modular stack</h2>
+							<h2 className='mb-5'>Games using the modular stack</h2>
 							<div className='row flex-column-reverse flex-lg-row mb-5'>
 								<div className='flex flex-column col-12 col-lg-4 d-flex justify-content-center'>
 									<h3 className='title mb-4'>Argus</h3>
 									<p className='text'>
-										Argus develops the World Engine, an onchain game engine that makes it easy for developers to build
-										and scale performance-intensive onchain games with Celestia underneath.
+										Argus develops the World Engine, an onchain game engine that makes it easy for developers to build and scale
+										performance-intensive onchain games with Celestia underneath.
 									</p>
 								</div>
 								<div className='col-12 col-lg-8 mb-4 mb-lg-0'>
@@ -117,8 +117,8 @@ const IndexPage = () => {
 								<div className='flex flex-column col-12 col-lg-4 d-flex justify-content-center'>
 									<h3 className='title mb-4'>Curio</h3>
 									<p className='text'>
-										Curio is a gaming studio building Keystone, an engine that allows developers to create games where
-										players can co-create new governance structures and economic systems, starting with their own social strategy title. 
+										Curio is a gaming studio building Keystone, an engine that allows developers to create games where players can
+										co-create new governance structures and economic systems, starting with their own social strategy title.
 									</p>
 								</div>
 							</div>
@@ -128,7 +128,7 @@ const IndexPage = () => {
 						<div className={"container"}>
 							<div className='row flex-column flex-lg-row mb-5'>
 								<div className='title-col flex flex-column col-12 col-lg-6 d-flex justify-content-center'>
-									<h2 className='with-decor mb-4'>Truly Autonomous Worlds</h2>
+									<h2 className='mb-4'>Truly Autonomous Worlds</h2>
 									<p className='text'>
 										Find the ideal modular stack that meets the scaling, flexibility, and sustainability requirements for your
 										game.
