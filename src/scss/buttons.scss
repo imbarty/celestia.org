@@ -4,7 +4,7 @@
 .button-simple {
 	height: auto;
 	line-height: 1.25em;
-	padding: 15px 25px;
+	padding: 15px 15px;
 	background: #000000;
 	border-radius: 6px;
 	font-family: $ruberoid;
@@ -32,6 +32,7 @@
 }
 
 .button-white {
+	border: 1px solid #000000;
 	border-radius: 6px;
 	font-family: $ruberoid;
 	font-weight: 500;
@@ -41,12 +42,10 @@
 	text-align: center;
 	transition: 300ms all ease-in-out;
 	text-decoration: none;
-	padding: 0 25px;
+	padding: 0 15px;
 	display: inline-block;
 	height: 50px;
 	line-height: 50px;
-	background: #fff;
-	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
 
 	&:hover {
 		background: #000;
@@ -54,25 +53,49 @@
 	}
 }
 
-.button-ghost {
+.button-purple {
 	border-radius: 6px;
+	border: 1px solid transparent;
+	background: #7b2bf9;
 	font-family: $ruberoid;
 	font-weight: 500;
 	font-size: 16px;
-	color: #000000;
-	border: 1px solid #000;
+	color: #fff;
 	letter-spacing: 0.2px;
 	text-align: center;
 	transition: 300ms all ease-in-out;
 	text-decoration: none;
-	padding: 0px 25px;
+	padding: 0 15px;
 	display: inline-block;
 	height: 50px;
 	line-height: 50px;
-	background: transparent;
 
 	&:hover {
-		background: #000;
+		background: lighten(#7b2bf9, 10%);
+		color: #fff;
+	}
+}
+
+.button-blurred {
+	border-radius: 6px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(17px);
+	font-family: $ruberoid;
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 0.2px;
+	text-align: center;
+	transition: 300ms all ease-in-out;
+	text-decoration: none;
+	padding: 0 15px;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.15);
 		color: #fff;
 	}
 }
@@ -148,7 +171,7 @@
 	i {
 		margin-left: 10px;
 		color: $purple;
-		font-size: 10px;
+		font-size: 12px;
 		float: right;
 		line-height: 23px;
 		transform: rotate(0deg);
@@ -184,7 +207,7 @@
 	i {
 		margin-left: 10px;
 		color: $purple;
-		font-size: 10px;
+		font-size: 12px;
 		float: right;
 		line-height: 24px;
 		transform: rotate(0deg);
