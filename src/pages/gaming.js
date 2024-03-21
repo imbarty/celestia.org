@@ -34,7 +34,7 @@ const IndexPage = () => {
 					<section className={"hero-section"}>
 						<div className={"container"}>
 							<h1>Scale with the number of gamers</h1>
-							<div className={"text"}>Celestia provides the expressivity to build fully onchain games</div>
+							<div className={"text"}>Frictionlessly build scalable and expressive fully on-chain games with Celestia underneath.</div>
 
 							<div className='buttom'>
 								<Button class={"purple"} type={"external"} text={"Build Modular"} url={"/"} />
@@ -54,18 +54,19 @@ const IndexPage = () => {
 									<div className='d-flex flex-column gap-3 align-items-lg-end'>
 										<div className='card'>
 											<div className='card-body'>
-												<h3 className='card-title'>Monetize</h3>
+												<h3 className='card-title'>Boundless creativity</h3>
 												<p className='card-text'>
-													Low transaction fees unlocks new opportunities to monetize and experiment with in-game economies.
+													Use your chain as a creative vehicle. Integrate any type of gaming logic and customise
+													your VM to unlock novel game features.
 												</p>
 											</div>
 										</div>
 										<div className='card small'>
 											<div className='card-body'>
-												<h3 className='card-title'>Dynamic scaling</h3>
+												<h3 className='card-title'>Become sovereign</h3>
 												<p className='card-text'>
-													Celestia provides dedicated, dynamic throughput for developers, that scales with the number of
-													users as the first blockchain with Data Availability Sampling.
+													Pick and choose the modular stack that best suits your initial needs. And in the future,
+													upgrade components as your game evolves and new modular capabilities come online.
 												</p>
 											</div>
 										</div>
@@ -75,18 +76,19 @@ const IndexPage = () => {
 									<div className='d-flex flex-column gap-3'>
 										<div className='card'>
 											<div className='card-body'>
-												<h3 className='card-title'>Minimized platform risk</h3>
+												<h3 className='card-title'>Dynamic scaling</h3>
 												<p className='card-text'>
-													Use Celestia's modular data layer with any blockchain framework and upgrade as new modular
-													capabilities come online.
+													Celestia’s Data Availability Sampling enables low fees and high throughput for your game,
+													whilst maintaining verifiability by any user.
 												</p>
 											</div>
 										</div>
 										<div className='card small'>
 											<div className='card-body'>
-												<h3 className='card-title'>Expressivity</h3>
+												<h3 className='card-title'>Forever Unpluggable</h3>
 												<p className='card-text'>
-													Express any type of game logic as a rollup on Celestia, even fully onchain gameplay.
+													Existing on top of an immutable blockchain with Celestia underneath, gaming moves from
+													a make-believe exercise to an objective reality that is always persistent and accessible.
 												</p>
 											</div>
 										</div>
@@ -130,8 +132,9 @@ const IndexPage = () => {
 								<div className='title-col flex flex-column col-12 col-lg-6 d-flex justify-content-center'>
 									<h2 className='mb-4'>Truly Autonomous Worlds</h2>
 									<p className='text'>
-										Find the ideal modular stack that meets the scaling, flexibility, and sustainability requirements for your
-										game.
+										Celestia allows you to make the leap from building a game to building a digital universe
+										that is sovereign, persistent and maximally scaleable whilst being verifiable by any user.
+										A truly autonomous world is built on top of fully autonomous foundations.
 									</p>
 									<div className='button-wrapper mt-3'>
 										<Button class={"simple"} type={"external"} text={"Level up"} url={"/build/"} />
