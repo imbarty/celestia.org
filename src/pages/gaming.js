@@ -85,7 +85,7 @@ const IndexPage = () => {
 										</div>
 										<div className='card small'>
 											<div className='card-body'>
-												<h3 className='card-title'>Forever Unpluggable</h3>
+												<h3 className='card-title'>Forever unpluggable</h3>
 												<p className='card-text'>
 													Existing on top of an immutable blockchain with Celestia underneath, gaming moves from
 													a make-believe exercise to an objective reality that is always persistent and accessible.
