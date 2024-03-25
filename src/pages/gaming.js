@@ -3,6 +3,7 @@ import ReactModal from "react-modal";
 import Layout from "../components/layout";
 import Button from "../components/buttons/button";
 import { StaticImage } from "gatsby-plugin-image";
+import gif from "../images/gaming/taw.gif";
 
 import "../scss/main.scss";
 import { FooterBoxes } from "../datas/home/content";
@@ -56,8 +57,8 @@ const IndexPage = () => {
 											<div className='card-body'>
 												<h3 className='card-title'>Boundless creativity</h3>
 												<p className='card-text'>
-													Use your chain as a creative vehicle. Integrate any type of gaming logic and customise
-													your VM to unlock novel game features.
+													Use your chain as a creative vehicle. Integrate any type of gaming logic and customise your VM to
+													unlock novel game features.
 												</p>
 											</div>
 										</div>
@@ -65,8 +66,8 @@ const IndexPage = () => {
 											<div className='card-body'>
 												<h3 className='card-title'>Become sovereign</h3>
 												<p className='card-text'>
-													Pick and choose the modular stack that best suits your initial needs. And in the future,
-													upgrade components as your game evolves and new modular capabilities come online.
+													Pick and choose the modular stack that best suits your initial needs. And in the future, upgrade
+													components as your game evolves and new modular capabilities come online.
 												</p>
 											</div>
 										</div>
@@ -78,8 +79,8 @@ const IndexPage = () => {
 											<div className='card-body'>
 												<h3 className='card-title'>Dynamic scaling</h3>
 												<p className='card-text'>
-													Celestia’s Data Availability Sampling enables low fees and high throughput for your game,
-													whilst maintaining verifiability by any user.
+													Celestia’s Data Availability Sampling enables low fees and high throughput for your game, whilst
+													maintaining verifiability by any user.
 												</p>
 											</div>
 										</div>
@@ -87,8 +88,8 @@ const IndexPage = () => {
 											<div className='card-body'>
 												<h3 className='card-title'>Forever unpluggable</h3>
 												<p className='card-text'>
-													Existing on top of an immutable blockchain with Celestia underneath, gaming moves from
-													a make-believe exercise to an objective reality that is always persistent and accessible.
+													Existing on top of an immutable blockchain with Celestia underneath, gaming moves from a
+													make-believe exercise to an objective reality that is always persistent and accessible.
 												</p>
 											</div>
 										</div>
@@ -132,16 +133,16 @@ const IndexPage = () => {
 								<div className='title-col flex flex-column col-12 col-lg-6 d-flex justify-content-center'>
 									<h2 className='mb-4'>Truly Autonomous Worlds</h2>
 									<p className='text'>
-										Celestia allows you to make the leap from building a game to building a digital universe
-										that is sovereign, persistent and maximally scaleable whilst being verifiable by any user.
-										A truly autonomous world is built on top of fully autonomous foundations.
+										Celestia allows you to make the leap from building a game to building a digital universe that is sovereign,
+										persistent and maximally scaleable whilst being verifiable by any user. A truly autonomous world is built on
+										top of fully autonomous foundations.
 									</p>
 									<div className='button-wrapper mt-3'>
 										<Button class={"simple"} type={"external"} text={"Level up"} url={"/build/"} />
 									</div>
 								</div>
 								<div className='col-12 col-lg-6 mt-5 mt-lg-0'>
-									<StaticImage src='../images/gaming/game-3.jpg' />
+									<img src={gif} alt='gif' />
 								</div>
 							</div>
 						</div>

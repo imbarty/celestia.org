@@ -19,6 +19,11 @@
 		margin-top: -460px;
 		margin-bottom: 0px;
 		z-index: -1;
+		&::before {
+			@include media-breakpoint-up(lg) {
+				background-size: 100% 1000px;
+			}
+		}
 	}
 
 	.gaming-page {
@@ -221,6 +226,12 @@
 			}
 		}
 		.unlock-section {
+			// padding-bottom: 220px;
+
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
 			.title-col {
 				padding-right: 65px;
 				h2 {
