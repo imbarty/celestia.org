@@ -1,284 +1,300 @@
 .celestia-underneath {
-	position: relative;
-	z-index: 1;
-	background: url(../images/BG/technology.png) no-repeat scroll top 500px right transparent;
-
-	@include media-breakpoint-down(xl) {
-		background-position: top 320px right;
-	}
-	@include media-breakpoint-down(lg) {
-		background-position: top 350px right;
-	}
-	@include media-breakpoint-down(md) {
-		background-position: top 450px right;
-	}
-	@include media-breakpoint-down(sm) {
-		background-position: -210px 450px;
-	}
-
-	.hero {
+	.celestia-underneath-hero {
+		position: relative;
 		overflow-x: hidden;
+		z-index: 1;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0px;
+		}
+
+		main {
+			z-index: 0;
+			// background: url(../images/BG/home.png) no-repeat scroll top 1800px left transparent;
+
+			@include media-breakpoint-down(xl) {
+				background-position: top 2000px left;
+			}
+			@include media-breakpoint-down(lg) {
+				background-position: top 2000px left;
+			}
+			@include media-breakpoint-down(md) {
+				background-position: top 3400px left;
+			}
+			@include media-breakpoint-down(sm) {
+				background-position: top 3300px left;
+			}
+		}
+
+		h1.main {
+			max-width: 100%;
+			margin-bottom: 113px;
+			@include media-breakpoint-down(xl) {
+				margin-bottom: 80px;
+			}
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 64px;
+			}
+		}
+		.text-box {
+			& p:not(:last-child),
+			& div:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			.subtitle {
+				margin-bottom: 40px;
+				font-size: 64px;
+				@include media-breakpoint-down(xl) {
+					font-size: 52px;
+					margin-bottom: 20px;
+				}
+				@include media-breakpoint-down(lg) {
+					font-size: 40px;
+					margin-bottom: 20px;
+				}
+			}
+			.text-bold {
+				font-weight: 500;
+			}
+			.text-slim {
+				color: #000;
+				font-weight: 300;
+			}
+			.text-purple {
+				color: #802ef4;
+				font-weight: 500;
+			}
+		}
+		.image-box {
+			padding-top: 200px;
+			padding-bottom: 200px;
+			position: relative;
+
+			@include media-breakpoint-down(xl) {
+				padding-top: 300px;
+			}
+			@include media-breakpoint-down(lg) {
+				padding-top: 220px;
+			}
+			@include media-breakpoint-down(md) {
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+			.image-wrapper {
+				position: relative;
+				z-index: 0;
+				@include media-breakpoint-down(md) {
+					padding-top: 60px;
+					padding-bottom: 40px;
+				}
+				.dotted-line-1 {
+					position: absolute;
+					@include media-breakpoint-down(md) {
+						right: 0;
+						left: 50%;
+						top: 0px;
+						transform: translateX(calc(-50% + 3px));
+						width: 2px;
+						overflow: visible;
+					}
+				}
+				.dotted-line-2 {
+					position: absolute;
+					@include media-breakpoint-down(md) {
+						right: 50%;
+						top: 63%;
+						width: 2px;
+						transform: translateX(calc(-50% + 6px));
+						overflow: visible;
+					}
+				}
+			}
+			.gatsby-image-wrapper {
+				overflow: visible;
+				&:before {
+					z-index: -1;
+					content: "";
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					position: absolute;
+					height: 150%;
+					width: 150%;
+					background: radial-gradient(50% 50% at 50% 50%, #d5baff 0%, rgba(255, 255, 255, 0) 80%);
+					@include media-breakpoint-down(md) {
+						background: radial-gradient(50% 50% at 50% 50%, #d5baff 0%, rgba(255, 255, 255, 0) 65%);
+						height: 200%;
+						width: 200%;
+					}
+				}
+			}
+			.card-1 {
+				position: absolute;
+				right: 50%;
+				top: 50px;
+				transform: translateX(calc(-50% + 64px));
+				z-index: 1;
+				@include media-breakpoint-down(xl) {
+					right: 50%;
+					transform: translateX(calc(-50% + 54px));
+					top: 140px;
+				}
+				@include media-breakpoint-down(lg) {
+					top: 60px;
+				}
+				@include media-breakpoint-down(md) {
+					position: relative;
+					top: unset;
+					right: 0;
+					left: unset;
+					transform: unset;
+					width: 100%;
+					z-index: 0;
+				}
+				.dotted-line {
+					position: absolute;
+					right: -30%;
+					top: 50%;
+					transform: translateY(calc(-50% + 44px));
+
+					@include media-breakpoint-down(lg) {
+						top: 55%;
+						right: -33%;
+					}
+				}
+				.text-card {
+					.text-card-wrapper {
+						position: relative;
+						padding: 24px;
+						max-width: 300px;
+						font-family: $inter;
+						background-color: #fff;
+						box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+						border-radius: 14px;
+						@include media-breakpoint-down(md) {
+							max-width: 100%;
+						}
+
+						h3 {
+							font-family: $ruberoid;
+							font-weight: bold;
+							font-size: 20px;
+							line-height: 1.1em;
+							color: #000;
+							margin-bottom: 10px;
+						}
+
+						p {
+							font-size: 14px;
+							color: #666;
+							margin-bottom: 8px;
+						}
+					}
+				}
+			}
+			.card-2 {
+				position: absolute;
+				right: 32.5%;
+				top: 64%;
+				width: 100%;
+				z-index: 1;
+				@include media-breakpoint-down(xl) {
+					right: 52%;
+					top: 68%;
+				}
+				@include media-breakpoint-down(lg) {
+					top: 80%;
+					right: unset;
+					left: 50%;
+					transform: translateX(-50%);
+					width: fit-content;
+				}
+				@include media-breakpoint-down(md) {
+					position: relative;
+					top: unset;
+					right: unset;
+					left: unset;
+					transform: unset;
+					width: 100%;
+				}
+				.dotted-line {
+					position: absolute;
+					right: 20%;
+					bottom: 50%;
+					transform: translateY(calc(-50% + 72px));
+					@include media-breakpoint-down(xl) {
+						right: 0%;
+					}
+					@include media-breakpoint-down(lg) {
+						right: unset;
+						left: 50%;
+						bottom: 87%;
+						transform: translateX(calc(-50% + 5px));
+						width: 2px;
+						overflow: visible;
+					}
+				}
+				.text-card {
+					.text-card-wrapper {
+						position: relative;
+						padding: 24px;
+						max-width: 300px;
+						font-family: $inter;
+						background-color: #fff;
+						box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+						border-radius: 14px;
+						@include media-breakpoint-down(md) {
+							max-width: 100%;
+						}
+
+						h3 {
+							font-family: $ruberoid;
+							font-weight: bold;
+							font-size: 20px;
+							line-height: 1.1em;
+							color: #000;
+							margin-bottom: 10px;
+						}
+
+						p {
+							font-size: 14px;
+							color: #666;
+							margin-bottom: 8px;
+						}
+					}
+				}
+			}
+		}
+
+		main {
+			padding-top: 50px;
+			@include media-breakpoint-down(xl) {
+				padding-top: 20px;
+			}
+		}
+		section {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			@include media-breakpoint-down(sm) {
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+		}
 	}
 
-	main {
-		z-index: 0;
-		// background: url(../images/BG/home.png) no-repeat scroll top 1800px left transparent;
+	.celestia-underneath-from-monolith {
+		padding-top: 0px;
+		padding-bottom: 200px;
 
-		@include media-breakpoint-down(xl) {
-			background-position: top 2000px left;
-		}
-		@include media-breakpoint-down(lg) {
-			background-position: top 2000px left;
-		}
-		@include media-breakpoint-down(md) {
-			background-position: top 3400px left;
-		}
-		@include media-breakpoint-down(sm) {
-			background-position: top 3300px left;
-		}
-	}
-
-	h1.main {
-		max-width: 100%;
-		margin-bottom: 113px;
-		@include media-breakpoint-down(xl) {
-			margin-bottom: 80px;
-		}
-		@include media-breakpoint-down(lg) {
-			margin-bottom: 64px;
-		}
-	}
-	.text-box {
-		& p:not(:last-child),
-		& div:not(:last-child) {
-			margin-bottom: 20px;
-		}
-		h2.subtitle {
-			margin-bottom: 40px;
+		.subtitle {
+			margin-bottom: 60px;
 			font-size: 64px;
+			text-align: center;
 			@include media-breakpoint-down(xl) {
 				font-size: 52px;
-				margin-bottom: 20px;
 			}
 			@include media-breakpoint-down(lg) {
 				font-size: 40px;
-				margin-bottom: 20px;
 			}
-		}
-		.text-bold {
-			font-weight: 500;
-		}
-		.text-slim {
-			color: #000;
-			font-weight: 300;
-		}
-		.text-purple {
-			color: #802ef4;
-			font-weight: 500;
-		}
-	}
-	.image-box {
-		padding-top: 200px;
-		padding-bottom: 200px;
-		position: relative;
-
-		@include media-breakpoint-down(xl) {
-			padding-top: 300px;
-		}
-		@include media-breakpoint-down(lg) {
-			padding-top: 220px;
-		}
-		@include media-breakpoint-down(md) {
-			padding-top: 260px;
-			padding-bottom: 260px;
-		}
-		.image-wrapper {
-			position: relative;
-			z-index: 0;
-		}
-		.gatsby-image-wrapper {
-			overflow: visible;
-			&:before {
-				z-index: -1;
-				content: "";
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				position: absolute;
-				height: 130%;
-				width: 130%;
-				background: radial-gradient(50% 50% at 50% 50%, #d5baff 0%, rgba(255, 255, 255, 0) 100%);
-				@include media-breakpoint-down(md) {
-					background: radial-gradient(50% 50% at 50% 50%, #d5baff 0%, rgba(255, 255, 255, 0) 65%);
-					height: 200%;
-					width: 200%;
-				}
-			}
-		}
-		.card-1 {
-			position: absolute;
-			right: 50%;
-			top: 50px;
-			transform: translateX(calc(-50% + 64px));
-			z-index: 1;
-			@include media-breakpoint-down(xl) {
-				right: 50%;
-				transform: translateX(calc(-50% + 54px));
-				top: 140px;
-			}
-			@include media-breakpoint-down(lg) {
-				top: 60px;
-			}
-			@include media-breakpoint-down(md) {
-				top: 50px;
-				right: 0;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 100%;
-				z-index: 0;
-			}
-			.dotted-line {
-				position: absolute;
-				right: -30%;
-				top: 50%;
-				transform: translateY(calc(-50% + 44px));
-
-				@include media-breakpoint-down(lg) {
-					top: 55%;
-					right: -33%;
-				}
-				@include media-breakpoint-down(md) {
-					right: 0;
-					left: 50%;
-					top: 100%;
-					transform: translateX(calc(-50% + 2px));
-					width: 1px;
-					overflow: visible;
-				}
-			}
-			.text-card {
-				.text-card-wrapper {
-					position: relative;
-					padding: 24px;
-					max-width: 300px;
-					font-family: $inter;
-					background-color: #fff;
-					box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-					border-radius: 14px;
-					@include media-breakpoint-down(md) {
-						max-width: 100%;
-					}
-
-					h3 {
-						font-family: $ruberoid;
-						font-weight: bold;
-						font-size: 20px;
-						line-height: 1.1em;
-						color: #000;
-						margin-bottom: 10px;
-					}
-
-					p {
-						font-size: 14px;
-						color: #666;
-						margin-bottom: 8px;
-					}
-				}
-			}
-		}
-		.card-2 {
-			position: absolute;
-			right: 32.5%;
-			top: 64%;
-			width: 100%;
-			z-index: 1;
-			@include media-breakpoint-down(xl) {
-				right: 52%;
-				top: 68%;
-			}
-			@include media-breakpoint-down(lg) {
-				top: 80%;
-				right: unset;
-				left: 50%;
-				transform: translateX(-50%);
-				width: fit-content;
-			}
-			@include media-breakpoint-down(md) {
-				top: 75%;
-				right: 0px;
-				width: 100%;
-			}
-			.dotted-line {
-				position: absolute;
-				right: 20%;
-				bottom: 50%;
-				transform: translateY(calc(-50% + 72px));
-				@include media-breakpoint-down(xl) {
-					right: 0%;
-				}
-				@include media-breakpoint-down(lg) {
-					right: unset;
-					left: 50%;
-					bottom: 83%;
-					transform: translateX(calc(-50% + 3px));
-				}
-				@include media-breakpoint-down(md) {
-					right: 50%;
-					bottom: 78%;
-					width: 1px;
-					overflow: visible;
-				}
-				@include media-breakpoint-down(sm) {
-					right: 50%;
-					bottom: 74%;
-					width: 1px;
-					overflow: visible;
-				}
-			}
-			.text-card {
-				.text-card-wrapper {
-					position: relative;
-					padding: 24px;
-					max-width: 300px;
-					font-family: $inter;
-					background-color: #fff;
-					box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-					border-radius: 14px;
-					@include media-breakpoint-down(md) {
-						max-width: 100%;
-					}
-
-					h3 {
-						font-family: $ruberoid;
-						font-weight: bold;
-						font-size: 20px;
-						line-height: 1.1em;
-						color: #000;
-						margin-bottom: 10px;
-					}
-
-					p {
-						font-size: 14px;
-						color: #666;
-						margin-bottom: 8px;
-					}
-				}
-			}
-		}
-	}
-
-	main {
-		padding-top: 50px;
-		@include media-breakpoint-down(xl) {
-			padding-top: 20px;
-		}
-	}
-	section {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		@include media-breakpoint-down(sm) {
-			padding-top: 40px;
-			padding-bottom: 40px;
 		}
 	}
 }

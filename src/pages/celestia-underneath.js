@@ -3,9 +3,7 @@ import Image from "../components/imageComponent";
 import Button from "../components/buttons/button";
 
 import { heroData } from "../datas/celestia-underneath/hero-data";
-import { whatIsANode } from "../datas/celestia-underneath/what-is-a-node";
-import { joinTheNetwork } from "../datas/celestia-underneath/join-the-network";
-import { lightNode } from "../datas/celestia-underneath/light-node";
+import { fromMonolith } from "../datas/celestia-underneath/from-monolith";
 import { FooterBoxes } from "../datas/celestia-underneath/content";
 
 import Layout from "../components/layout";
@@ -20,7 +18,7 @@ const CelestiaUnderneath = () => {
 			<Seo title={seoContent.title} description={seoContent.description} image={seoContent.image} />
 			<div className={"celestia-underneath"}>
 				<main>
-					<section className='hero'>
+					<section className='celestia-underneath-hero'>
 						<div className={"container"}>
 							<h1 className={"main"}>{heroData.title}</h1>
 							<div className={"row justify-content-center justify-content-lg-between align-items-start"}>
@@ -45,16 +43,6 @@ const CelestiaUnderneath = () => {
 												>
 													<path d='M0 0.5H119C127.837 0.5 135 7.66344 135 16.5V81' stroke='black' strokeDasharray='12 12' />
 												</svg>
-												<svg
-													className='d-md-none'
-													width={2}
-													height={140}
-													viewBox='0 0 1 140'
-													fill='none'
-													xmlns='http://www.w3.org/2000/svg'
-												>
-													<line x1='0.5' y1='2.18557e-08' x2='0.499994' y2={140} stroke='black' strokeDasharray='12 12' />
-												</svg>
 											</div>
 											<div className='text-card'>
 												<div className='text-card-wrapper'>
@@ -75,7 +63,31 @@ const CelestiaUnderneath = () => {
 
 									{/* main image */}
 									<div className='image-wrapper'>
-										<Image alt={heroData.image.alt} filename={heroData.image.filename} />
+										<div className='dotted-line-1'>
+											<svg
+												className='d-md-none'
+												width={2}
+												height={140}
+												viewBox='0 0 1 140'
+												fill='none'
+												xmlns='http://www.w3.org/2000/svg'
+											>
+												<line x1='0.5' y1='2.18557e-08' x2='0.499994' y2={140} stroke='black' strokeDasharray='12 12' />
+											</svg>
+										</div>
+										<Image alt={heroData.image.alt} filename={heroData.image.src} />
+										<div className='dotted-line-2'>
+											<svg
+												className='d-md-none'
+												width={1}
+												height={200}
+												viewBox='0 0 1 200'
+												fill='none'
+												xmlns='http://www.w3.org/2000/svg'
+											>
+												<line x1='0.5' y1='-2.18557e-08' x2='0.500009' y2={200} stroke='black' strokeDasharray='12 12' />
+											</svg>
+										</div>
 									</div>
 
 									{/* card 2 */}
@@ -98,7 +110,7 @@ const CelestiaUnderneath = () => {
 												</svg>
 
 												<svg
-													className='d-lg-none'
+													className='d-none d-md-block d-lg-none'
 													width={1}
 													height={200}
 													viewBox='0 0 1 200'
@@ -128,6 +140,21 @@ const CelestiaUnderneath = () => {
 							</div>
 						</div>
 					</section>
+					<section className={"celestia-underneath-from-monolith"}>
+						<div className={"container"}>
+							<h2 className={"subtitle"}>{fromMonolith.title}</h2>
+							<div className={"row"}>
+								<div className={"col-12 col-md-4 pe-5"}>
+									<div className={"text"} dangerouslySetInnerHTML={{ __html: fromMonolith.text }} />
+								</div>
+								<div className={"col-12 col-md-8"}>
+									<div className='image-wrapper'>
+										<Image alt={fromMonolith.image.alt} filename={fromMonolith.image.src} />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 
 					{/* <section className={"what-is-a-node"}>
 						<div className={"container"}>
@@ -144,7 +171,7 @@ const CelestiaUnderneath = () => {
 							</div>
 						</div>
 					</section> */}
-
+					{/* 
 					<section className={"join-the-network"}>
 						<div className={"container"}>
 							<div className={"row justify-content-center align-items-center"}>
@@ -193,7 +220,7 @@ const CelestiaUnderneath = () => {
 								</div>
 							</div>
 						</div>
-					</section>
+					</section> */}
 				</main>
 			</div>
 		</Layout>
