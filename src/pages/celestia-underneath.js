@@ -5,6 +5,7 @@ import Button from "../components/buttons/button";
 import { heroData } from "../datas/celestia-underneath/hero-data";
 import { fromMonolith } from "../datas/celestia-underneath/from-monolith";
 import { dataAvailability } from "../datas/celestia-underneath/data-availability";
+import { whyCelestia } from "../datas/celestia-underneath/why-celestia";
 import { FooterBoxes } from "../datas/celestia-underneath/content";
 
 import Layout from "../components/layout";
@@ -248,6 +249,55 @@ const CelestiaUnderneath = () => {
 								</div>
 								<div className={"text-box col-12 col-lg-5"}>
 									<div dangerouslySetInnerHTML={{ __html: dataAvailability.text }} />
+									<Button
+										class={dataAvailability.button.class}
+										type={dataAvailability.button.type}
+										text={dataAvailability.button.text}
+										url={dataAvailability.button.url}
+									/>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section className={"celestia-underneath-why-celestia"}>
+						<div className={"container"}>
+							<h2 className={"subtitle"}>{whyCelestia.title}</h2>
+							<div className={"row"}>
+								<div className={"col-12 col-lg-6 mb-4 mb-lg-0"}>
+									<div className='grid-item'>
+										<div className='bla'>
+											<div className='image-wrapper'>
+												<Image alt={whyCelestia.content[0].image.alt} filename={whyCelestia.content[0].image.src} />
+											</div>
+										</div>
+										<h4 className='title'>{whyCelestia.content[0].title}</h4>
+										<div dangerouslySetInnerHTML={{ __html: whyCelestia.content[0].text }} />
+									</div>
+								</div>
+								<div className={"col-12 col-lg-6"}>
+									<div className='grid-item'>
+										<div className='image-wrapper'>
+											<Image alt={whyCelestia.content[1].image.alt} filename={whyCelestia.content[1].image.src} />
+										</div>
+										<h4 className='title'>{whyCelestia.content[1].title}</h4>
+										<div dangerouslySetInnerHTML={{ __html: whyCelestia.content[1].text }} />
+									</div>
+								</div>
+								<div className={"col-12 pt-4 px-4"}>
+									<div className='grid-item horizontal row justify-content-center align-items-center'>
+										<div className='col-12 col-lg-6 pe-0 pe-lg-5'>
+											<div className='image-wrapper'>
+												<Image alt={whyCelestia.content[2].image.alt} filename={whyCelestia.content[2].image.src} />
+											</div>
+										</div>
+										<div className='col-12 col-lg-6 ps-0 ps-lg-5'>
+											<div>
+												<h4 className='title'>{whyCelestia.content[2].title}</h4>
+												<div dangerouslySetInnerHTML={{ __html: whyCelestia.content[2].text }} />
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

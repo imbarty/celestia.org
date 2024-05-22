@@ -8,4 +8,10 @@ export const dataAvailability = {
 		src: "celestia-underneath/celestia-underneath-da-image.png",
 		alt: "From monolithic to modular",
 	},
+	button: {
+		class: "simple",
+		type: "internal",
+		text: "Read Light Node",
+		url: "#",
+	},
 };

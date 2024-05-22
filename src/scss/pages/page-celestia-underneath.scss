@@ -335,7 +335,7 @@
 		padding-bottom: 0px;
 		@include media-breakpoint-down(md) {
 			padding-top: 80px;
-			padding-bottom: 200px;
+			padding-bottom: 0px;
 		}
 		h2.subtitle {
 			line-height: 0.92em;
@@ -351,17 +351,18 @@
 			padding: 0px 50px;
 			@include media-breakpoint-down(lg) {
 				padding: 0px 20px;
-				order: 2;
 			}
 			@include media-breakpoint-down(md) {
-				padding-top: 20px;
+				padding-bottom: 20px;
 			}
 		}
 		.text-box {
 			padding: 0px 50px;
+			@include media-breakpoint-down(xl) {
+				padding: 0px 0px;
+			}
 			@include media-breakpoint-down(lg) {
 				padding: 0px 20px;
-				order: 1;
 				max-width: 70vw;
 				margin-left: auto;
 				margin-right: auto;
@@ -371,6 +372,13 @@
 				margin-top: 20px;
 				margin-left: 0px;
 				margin-right: 0px;
+			}
+			@include media-breakpoint-down(sm) {
+				margin-top: 0px;
+				margin-bottom: 40px;
+			}
+			.button {
+				margin-top: 20px;
 			}
 		}
 		.position-relative {
@@ -405,6 +413,66 @@
 			}
 			@include media-breakpoint-down(sm) {
 				max-width: 100%;
+			}
+		}
+	}
+	.celestia-underneath-why-celestia {
+		position: relative;
+		z-index: 1;
+		padding-top: 160px;
+		padding-bottom: 0px;
+		@include media-breakpoint-down(lg) {
+			padding-top: 100px;
+		}
+
+		h2.subtitle {
+			text-align: center;
+			margin-bottom: 64px;
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 40px;
+			}
+		}
+
+		.grid-item {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 40px;
+			background: #ffffff;
+			border: 1px solid #e2e2e2;
+			border-radius: 14px;
+			.image-wrapper {
+				padding: 20px;
+				@include media-breakpoint-down(sm) {
+					padding: 0px;
+				}
+			}
+			@include media-breakpoint-down(md) {
+				padding: 22px;
+			}
+			.title {
+				font-family: $ruberoid;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 1.2;
+				letter-spacing: -0.642857px;
+				color: #000000;
+				margin-top: 10px;
+				margin-bottom: 24px;
+				@include media-breakpoint-down(md) {
+					margin-bottom: 20px;
+				}
+			}
+			&.horizontal {
+				flex-direction: row;
+				.image-wrapper {
+					padding: 0px;
+					width: 100%;
+					@include media-breakpoint-down(lg) {
+						padding: 20px;
+					}
+				}
 			}
 		}
 	}
