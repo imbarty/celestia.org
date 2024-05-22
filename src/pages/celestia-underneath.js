@@ -144,12 +144,14 @@ const CelestiaUnderneath = () => {
 						<div className={"container"}>
 							<h2 className={"subtitle"}>{fromMonolith.title}</h2>
 							<div className={"row"}>
-								<div className={"col-12 col-md-4 pe-5"}>
+								<div className={"col-12 col-lg-6 col-xl-4 pe-sm-4 pe-md-5 pb-4 pb-lg-0"}>
 									<div className={"text"} dangerouslySetInnerHTML={{ __html: fromMonolith.text }} />
 								</div>
-								<div className={"col-12 col-md-8"}>
-									<div className='image-wrapper'>
-										<Image alt={fromMonolith.image.alt} filename={fromMonolith.image.src} />
+								<div className={"col-12 col-lg-6 col-xl-8"}>
+									<div className='scroll-wrapper'>
+										<div className='image-wrapper'>
+											<Image alt={fromMonolith.image.alt} filename={fromMonolith.image.src} />
+										</div>
 									</div>
 								</div>
 							</div>
