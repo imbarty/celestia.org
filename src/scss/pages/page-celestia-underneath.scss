@@ -45,7 +45,7 @@
 			padding: 64px 0px 72px;
 		}
 		@include media-breakpoint-down(md) {
-			padding: 64px 0px 40px;
+			padding: 64px 0px 56px;
 		}
 		h1.main {
 			max-width: 100%;
@@ -144,6 +144,41 @@
 					}
 				}
 			}
+			.fade-in-card-1 {
+				opacity: 0;
+				&.visible {
+					animation: fadeIn 700ms forwards;
+					animation-delay: 400ms;
+				}
+			}
+			.fade-in-line-1 {
+				opacity: 0;
+				&.visible {
+					animation: fadeIn 700ms forwards;
+					animation-delay: 800ms;
+				}
+			}
+			.fade-in-card-2 {
+				opacity: 0;
+				&.visible {
+					animation: fadeIn 700ms forwards;
+					animation-delay: 1400ms;
+				}
+			}
+			.fade-in-line-2 {
+				opacity: 0;
+				&.visible {
+					animation: fadeIn 700ms forwards;
+					animation-delay: 1600ms;
+				}
+			}
+
+			@keyframes fadeIn {
+				to {
+					opacity: 1;
+				}
+			}
+
 			.card-1 {
 				position: absolute;
 				right: 50%;
@@ -351,9 +386,14 @@
 			padding: 0px 50px;
 			@include media-breakpoint-down(lg) {
 				padding: 0px 20px;
+				padding-bottom: 56px;
 			}
 			@include media-breakpoint-down(md) {
 				padding-bottom: 20px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 0px 60px;
+				padding-bottom: 40px;
 			}
 		}
 		.text-box {
@@ -382,10 +422,10 @@
 			}
 		}
 		.position-relative {
-			@include media-breakpoint-up(xxxl) {
-				margin-top: -10vw;
-			}
 			@include media-breakpoint-up(xxl) {
+				margin-top: -5vw;
+			}
+			@include media-breakpoint-up(xxxl) {
 				margin-top: -8vw;
 			}
 		}
@@ -420,9 +460,10 @@
 		position: relative;
 		z-index: 1;
 		padding-top: 160px;
-		padding-bottom: 0px;
+		padding-bottom: 140px;
 		@include media-breakpoint-down(lg) {
 			padding-top: 100px;
+			padding-bottom: 160px;
 		}
 
 		h2.subtitle {

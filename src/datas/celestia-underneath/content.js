@@ -1,22 +1,22 @@
-export const FooterBoxes = [
+export const FooterBoxes2 = [
 	{
-		title: "Join our growing ecosystem",
-		text: "View job openings and career opportunities in the Celestia ecosystem.",
-		button: {
-			text: "Current openings",
-			href: "https://celestia.pallet.com/jobs/",
-			id: "operator",
-			type: "simple",
+		title: "Build whatever",
+		text: "With Celestia underneath, a customizable blockchain becomes as easy to deploy as a smart contract.",
+		link: {
+			text: "Build modular",
+			href: "/build/",
+			type: "internal",
+			id: "build",
 		},
 	},
 	{
-		title: "Build on our developer beta",
-		text: "Join a growing modular ecosystem of developers building on testnet.",
-		button: {
-			text: "Get started",
-			href: "/build/",
-			id: "operator",
-			type: "simple",
+		title: "Explore Celestia",
+		text: "Explore Celestia’s ecosystem of apps and services, run a light node, or learn about Tia.",
+		link: {
+			text: "Explore",
+			href: "/#explore-celestia",
+			type: "anchor",
+			id: "explore",
 		},
 	},
 ];

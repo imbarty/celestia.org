@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "../components/imageComponent";
 import Button from "../components/buttons/button";
 
@@ -6,7 +6,7 @@ import { heroData } from "../datas/celestia-underneath/hero-data";
 import { fromMonolith } from "../datas/celestia-underneath/from-monolith";
 import { dataAvailability } from "../datas/celestia-underneath/data-availability";
 import { whyCelestia } from "../datas/celestia-underneath/why-celestia";
-import { FooterBoxes } from "../datas/celestia-underneath/content";
+import { FooterBoxes2 } from "../datas/celestia-underneath/content";
 
 import Layout from "../components/layout";
 
@@ -14,8 +14,76 @@ import { seoContent } from "../datas/run-a-node/seoContent";
 import Seo from "../components/seo";
 
 const CelestiaUnderneath = () => {
+	const [isCard1Visible, setIsCard1Visible] = useState(false);
+	const [isCard2Visible, setIsCard2Visible] = useState(false);
+	const circleRefs = useRef([]);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (entry.target.classList.contains("card-1")) {
+							setIsCard1Visible(true);
+						} else if (entry.target.classList.contains("card-2")) {
+							setIsCard2Visible(true);
+						}
+					}
+				});
+			},
+			{ threshold: 0.5 } // Adjust the threshold as needed
+		);
+
+		const card1Element = document.querySelector(".card-1");
+		const card2Element = document.querySelector(".card-2");
+
+		if (card1Element) {
+			observer.observe(card1Element);
+		}
+		if (card2Element) {
+			observer.observe(card2Element);
+		}
+
+		return () => {
+			if (card1Element) {
+				observer.unobserve(card1Element);
+			}
+			if (card2Element) {
+				observer.unobserve(card2Element);
+			}
+		};
+	}, []);
+
+	useEffect(() => {
+		const updateCircleRadius = () => {
+			const viewportWidth = window.innerWidth;
+			let radius = 3; // default radius
+
+			if (viewportWidth < 576) {
+				radius = 5;
+			} else if (viewportWidth >= 1600) {
+				radius = 2.2;
+			} else {
+				radius = 3;
+			}
+
+			circleRefs.current.forEach((circle) => {
+				if (circle) {
+					circle.setAttribute("r", radius);
+				}
+			});
+		};
+
+		updateCircleRadius();
+		window.addEventListener("resize", updateCircleRadius);
+
+		return () => {
+			window.removeEventListener("resize", updateCircleRadius);
+		};
+	}, []);
+
 	return (
-		<Layout footerBoxes={FooterBoxes}>
+		<Layout footerBoxes2={FooterBoxes2}>
 			<Seo title={seoContent.title} description={seoContent.description} image={seoContent.image} />
 			<div className={"celestia-underneath"}>
 				<main>
@@ -29,11 +97,11 @@ const CelestiaUnderneath = () => {
 									<p className={"text-slim"} dangerouslySetInnerHTML={{ __html: heroData.textLight }} />
 									<p className={"text-purple"} dangerouslySetInnerHTML={{ __html: heroData.textPurple }} />
 								</div>
-								<div className={"image-box col-12 col-md-9 col-lg-6"}>
+								<div id='animate-target' className={"image-box col-12 col-md-9 col-lg-6"}>
 									{/* card 1 */}
-									<div className='card-1'>
+									<div className={`card-1 fade-in-card-1 ${isCard1Visible ? "visible" : ""}`}>
 										<div className='position-relative'>
-											<div className='dotted-line'>
+											<div className={`dotted-line fade-in-line-1 ${isCard1Visible ? "visible" : ""}`}>
 												<svg
 													className='d-none d-md-block'
 													width={136}
@@ -64,7 +132,7 @@ const CelestiaUnderneath = () => {
 
 									{/* main image */}
 									<div className='image-wrapper'>
-										<div className='dotted-line-1'>
+										<div className={`dotted-line-1 fade-in-line-1 ${isCard1Visible ? "visible" : ""}`}>
 											<svg
 												className='d-md-none'
 												width={2}
@@ -77,7 +145,7 @@ const CelestiaUnderneath = () => {
 											</svg>
 										</div>
 										<Image alt={heroData.image.alt} filename={heroData.image.src} />
-										<div className='dotted-line-2'>
+										<div className={`dotted-line-2 fade-in-line-2 ${isCard2Visible ? "visible" : ""}`}>
 											<svg
 												className='d-md-none'
 												width={1}
@@ -92,9 +160,9 @@ const CelestiaUnderneath = () => {
 									</div>
 
 									{/* card 2 */}
-									<div className='card-2'>
+									<div className={`card-2 fade-in-card-2 ${isCard2Visible ? "visible" : ""}`}>
 										<div className='position-relative'>
-											<div className='dotted-line'>
+											<div className={`dotted-line fade-in-line-2 ${isCard2Visible ? "visible" : ""}`}>
 												<svg
 													className='d-none d-lg-block'
 													width={250}
@@ -162,26 +230,107 @@ const CelestiaUnderneath = () => {
 						<div className={"position-relative"}>
 							<svg width='100%' height='100%' viewBox='0 0 1681 589' fill='none' xmlns='http://www.w3.org/2000/svg'>
 								<path
+									id='path0'
 									d='M1 2.86024C157.206 184.234 329.993 264.691 553.395 264.691C776.796 264.691 851.845 264.691 1128.47 264.691C1405.11 264.691 1572.23 133.543 1680 1'
 									stroke='url(#paint0_linear_4225_4178)'
 									stroke-opacity='0.6'
 								/>
+								<circle ref={(el) => (circleRefs.current[0] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s'>
+										<mpath href='#path0' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										repeatCount='indefinite'
+									/>
+								</circle>
 								<path
+									id='path1'
 									d='M1 166.46C162.341 245.381 293.951 280.2 551.922 280.2C809.893 280.2 857.115 280.2 1129.08 280.2C1401.04 280.2 1527.4 239.811 1680 166.46'
 									stroke='url(#paint1_linear_4225_4178)'
 									stroke-opacity='0.6'
 								/>
-								<path d='M1 294.779H1680' stroke='url(#paint2_linear_4225_4178)' stroke-opacity='0.6' />
+								<circle ref={(el) => (circleRefs.current[1] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s' begin='2s'>
+										<mpath href='#path1' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										begin='2s'
+										repeatCount='indefinite'
+									/>
+								</circle>
+								<path id='path2' d='M1 294.779H1680' stroke='url(#paint2_linear_4225_4178)' stroke-opacity='0.6' />
+								<circle ref={(el) => (circleRefs.current[2] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s' begin='1s'>
+										<mpath href='#path2' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										begin='1s'
+										repeatCount='indefinite'
+									/>
+								</circle>
 								<path
+									id='path3'
 									d='M1 422.636C162.341 343.715 293.951 308.896 551.922 308.896C809.893 308.896 857.115 308.896 1129.08 308.896C1401.04 308.896 1527.4 349.286 1680 422.636'
 									stroke='url(#paint3_linear_4225_4178)'
 									stroke-opacity='0.6'
 								/>
+								<circle ref={(el) => (circleRefs.current[3] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s' begin='3s'>
+										<mpath href='#path3' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										begin='3s'
+										repeatCount='indefinite'
+									/>
+								</circle>
 								<path
+									id='path4'
 									d='M1 586.699C157.206 405.325 329.993 324.869 553.395 324.869C776.796 324.869 851.845 324.869 1128.47 324.869C1405.11 324.869 1572.23 456.017 1680 588.56'
 									stroke='url(#paint4_linear_4225_4178)'
 									stroke-opacity='0.6'
 								/>
+								<circle ref={(el) => (circleRefs.current[4] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s' begin='1s'>
+										<mpath href='#path4' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										begin='1s'
+										repeatCount='indefinite'
+									/>
+								</circle>
+								<path
+									id='path5'
+									d='M1 422.636C162.341 343.715 293.951 308.896 551.922 308.896C809.893 308.896 857.115 308.896 1129.08 308.896C1401.04 308.896 1527.4 349.286 1680 422.636'
+									stroke='url(#paint3_linear_4225_4178)'
+									stroke-opacity='0.6'
+								/>
+								<circle ref={(el) => (circleRefs.current[5] = el)}>
+									<animateMotion repeatCount='indefinite' dur='4s' begin='4s'>
+										<mpath href='#path5' />
+									</animateMotion>
+									<animate
+										attributeName='fill'
+										values='rgba(123, 43, 249, 0.6); rgba(255, 255, 255, 0.6); rgba(248, 97, 218, 0.6)'
+										dur='4s'
+										begin='4s'
+										repeatCount='indefinite'
+									/>
+								</circle>
 								<defs>
 									<linearGradient id='paint0_linear_4225_4178' x1='1' y1='1' x2='1680' y2='0.999999' gradientUnits='userSpaceOnUse'>
 										<stop stop-color='#7B2BF9' />
