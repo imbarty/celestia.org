@@ -300,7 +300,7 @@
 
 	.celestia-underneath-from-monolith {
 		padding-top: 0px;
-		padding-bottom: 200px;
+		padding-bottom: 40px;
 		position: relative;
 		z-index: 1;
 
@@ -325,6 +325,86 @@
 				@include media-breakpoint-up(sm) {
 					min-width: unset;
 				}
+			}
+		}
+	}
+	.celestia-underneath-da {
+		z-index: 1;
+		position: relative;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		@include media-breakpoint-down(md) {
+			padding-top: 80px;
+			padding-bottom: 200px;
+		}
+		h2.subtitle {
+			line-height: 0.92em;
+			text-align: center;
+			text-wrap: pretty;
+			max-width: 550px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.image-box {
+			padding: 0px 50px;
+			@include media-breakpoint-down(lg) {
+				padding: 0px 20px;
+				order: 2;
+			}
+			@include media-breakpoint-down(md) {
+				padding-top: 20px;
+			}
+		}
+		.text-box {
+			padding: 0px 50px;
+			@include media-breakpoint-down(lg) {
+				padding: 0px 20px;
+				order: 1;
+				max-width: 70vw;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include media-breakpoint-down(md) {
+				max-width: 100%;
+				margin-top: 20px;
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+		}
+		.position-relative {
+			@include media-breakpoint-up(xxxl) {
+				margin-top: -10vw;
+			}
+			@include media-breakpoint-up(xxl) {
+				margin-top: -8vw;
+			}
+		}
+
+		.container {
+			margin-top: -9vw;
+			@include media-breakpoint-down(xxl) {
+				margin-top: -7vw;
+			}
+			@include media-breakpoint-down(xl) {
+				margin-top: -5vw;
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: unset;
+			}
+		}
+		.image-wrapper {
+			@include media-breakpoint-down(lg) {
+				max-width: 50vw;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include media-breakpoint-down(md) {
+				max-width: 70vw;
+			}
+			@include media-breakpoint-down(sm) {
+				max-width: 100%;
 			}
 		}
 	}

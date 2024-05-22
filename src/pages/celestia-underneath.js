@@ -4,10 +4,10 @@ import Button from "../components/buttons/button";
 
 import { heroData } from "../datas/celestia-underneath/hero-data";
 import { fromMonolith } from "../datas/celestia-underneath/from-monolith";
+import { dataAvailability } from "../datas/celestia-underneath/data-availability";
 import { FooterBoxes } from "../datas/celestia-underneath/content";
 
 import Layout from "../components/layout";
-import IconCard from "../components/modules/icon-card";
 
 import { seoContent } from "../datas/run-a-node/seoContent";
 import Seo from "../components/seo";
@@ -157,22 +157,102 @@ const CelestiaUnderneath = () => {
 							</div>
 						</div>
 					</section>
-
-					{/* <section className={"what-is-a-node"}>
+					<section className={"celestia-underneath-da"}>
+						<div className={"position-relative"}>
+							<svg width='100%' height='100%' viewBox='0 0 1681 589' fill='none' xmlns='http://www.w3.org/2000/svg'>
+								<path
+									d='M1 2.86024C157.206 184.234 329.993 264.691 553.395 264.691C776.796 264.691 851.845 264.691 1128.47 264.691C1405.11 264.691 1572.23 133.543 1680 1'
+									stroke='url(#paint0_linear_4225_4178)'
+									stroke-opacity='0.6'
+								/>
+								<path
+									d='M1 166.46C162.341 245.381 293.951 280.2 551.922 280.2C809.893 280.2 857.115 280.2 1129.08 280.2C1401.04 280.2 1527.4 239.811 1680 166.46'
+									stroke='url(#paint1_linear_4225_4178)'
+									stroke-opacity='0.6'
+								/>
+								<path d='M1 294.779H1680' stroke='url(#paint2_linear_4225_4178)' stroke-opacity='0.6' />
+								<path
+									d='M1 422.636C162.341 343.715 293.951 308.896 551.922 308.896C809.893 308.896 857.115 308.896 1129.08 308.896C1401.04 308.896 1527.4 349.286 1680 422.636'
+									stroke='url(#paint3_linear_4225_4178)'
+									stroke-opacity='0.6'
+								/>
+								<path
+									d='M1 586.699C157.206 405.325 329.993 324.869 553.395 324.869C776.796 324.869 851.845 324.869 1128.47 324.869C1405.11 324.869 1572.23 456.017 1680 588.56'
+									stroke='url(#paint4_linear_4225_4178)'
+									stroke-opacity='0.6'
+								/>
+								<defs>
+									<linearGradient id='paint0_linear_4225_4178' x1='1' y1='1' x2='1680' y2='0.999999' gradientUnits='userSpaceOnUse'>
+										<stop stop-color='#7B2BF9' />
+										<stop offset='0.5' stop-color='white' />
+										<stop offset='1' stop-color='#F861DA' />
+									</linearGradient>
+									<linearGradient
+										id='paint1_linear_4225_4178'
+										x1='1'
+										y1='166.46'
+										x2='1680'
+										y2='166.46'
+										gradientUnits='userSpaceOnUse'
+									>
+										<stop stop-color='#7B2BF9' />
+										<stop offset='0.5' stop-color='white' />
+										<stop offset='1' stop-color='#F861DA' />
+									</linearGradient>
+									<linearGradient
+										id='paint2_linear_4225_4178'
+										x1='1'
+										y1='294.779'
+										x2='1680'
+										y2='294.779'
+										gradientUnits='userSpaceOnUse'
+									>
+										<stop stop-color='#7B2BF9' />
+										<stop offset='0.5' stop-color='white' />
+										<stop offset='1' stop-color='#F861DA' />
+									</linearGradient>
+									<linearGradient
+										id='paint3_linear_4225_4178'
+										x1='1'
+										y1='308.896'
+										x2='1680'
+										y2='308.896'
+										gradientUnits='userSpaceOnUse'
+									>
+										<stop stop-color='#7B2BF9' />
+										<stop offset='0.5' stop-color='white' />
+										<stop offset='1' stop-color='#F861DA' />
+									</linearGradient>
+									<linearGradient
+										id='paint4_linear_4225_4178'
+										x1='1'
+										y1='324.869'
+										x2='1680'
+										y2='324.869'
+										gradientUnits='userSpaceOnUse'
+									>
+										<stop stop-color='#7B2BF9' />
+										<stop offset='0.5' stop-color='white' />
+										<stop offset='1' stop-color='#F861DA' />
+									</linearGradient>
+								</defs>
+							</svg>
+							<h2 className={"subtitle"}>{dataAvailability.title}</h2>
+						</div>
 						<div className={"container"}>
-							<div className={"row justify-content-between align-items-center"}>
-								<div className={"image-box--node col-12 col-lg-6"}>
+							<div className={"row justify-content-center align-items-center"}>
+								<div className={"image-box col-12 col-lg-5"}>
 									<div className='image-wrapper'>
-										<Image alt={heroData.image.alt} filename={heroData.image.filename} />
+										<Image alt={dataAvailability.image.alt} filename={dataAvailability.image.src} />
 									</div>
 								</div>
-								<div className={"text-box col-12 col-lg-6"}>
-									<h2 className='title'>{whatIsANode.title}</h2>
-									<div className={"text"} dangerouslySetInnerHTML={{ __html: whatIsANode.text }} />
+								<div className={"text-box col-12 col-lg-5"}>
+									<div dangerouslySetInnerHTML={{ __html: dataAvailability.text }} />
 								</div>
 							</div>
 						</div>
-					</section> */}
+					</section>
+
 					{/* 
 					<section className={"join-the-network"}>
 						<div className={"container"}>
