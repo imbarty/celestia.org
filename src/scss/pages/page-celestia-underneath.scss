@@ -351,7 +351,7 @@
 			}
 		}
 		.scroll-wrapper {
-			overflow-x: scroll;
+			overflow-x: auto;
 			padding-bottom: 12px;
 			& .image-wrapper {
 				@include media-breakpoint-down(sm) {
