@@ -5,7 +5,7 @@ export const FooterBoxes2 = [
 		link: {
 			text: "Build modular",
 			href: "/build/",
-			type: "internal",
+			type: "external",
 			id: "build",
 		},
 	},
@@ -15,7 +15,7 @@ export const FooterBoxes2 = [
 		link: {
 			text: "Explore",
 			href: "/#explore-celestia",
-			type: "anchor",
+			type: "external",
 			id: "explore",
 		},
 	},

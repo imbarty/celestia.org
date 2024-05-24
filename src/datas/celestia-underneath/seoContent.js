@@ -1,5 +1,5 @@
 export const seoContent = {
-	title: "Run a Node | celestia.org",
-	description: "Build games with new capabilities. Celestia scales with the number of users so games can scale with their usebase.",
-    image: "",
+	title: "Celestia Underneath | celestia.org",
+	description: "Celestia is a modular blockchain specialized in ordering transactions and making their data available (DA). ",
+	image: "",
 };

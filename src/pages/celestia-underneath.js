@@ -10,7 +10,7 @@ import { FooterBoxes2 } from "../datas/celestia-underneath/content";
 
 import Layout from "../components/layout";
 
-import { seoContent } from "../datas/run-a-node/seoContent";
+import { seoContent } from "../datas/celestia-underneath/seoContent";
 import Seo from "../components/seo";
 
 const CelestiaUnderneath = () => {

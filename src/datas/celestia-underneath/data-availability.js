@@ -10,7 +10,7 @@ export const dataAvailability = {
 	},
 	button: {
 		class: "simple",
-		type: "internal",
+		type: "external",
 		text: "Read Light Node",
 		url: "/run-a-light-node/",
 	},
