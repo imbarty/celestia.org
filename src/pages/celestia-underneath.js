@@ -93,9 +93,7 @@ const CelestiaUnderneath = () => {
 							<div className={"row justify-content-center justify-content-lg-between align-items-start"}>
 								<div className={"text-box col-12 col-lg-5"}>
 									<h2 className={"subtitle"}>{heroData.subtitle}</h2>
-									<p className={"text-bold"} dangerouslySetInnerHTML={{ __html: heroData.textBold }} />
-									<p className={"text-slim"} dangerouslySetInnerHTML={{ __html: heroData.textLight }} />
-									<p className={"text-purple"} dangerouslySetInnerHTML={{ __html: heroData.textPurple }} />
+									<div className={"text-slim"} dangerouslySetInnerHTML={{ __html: heroData.description }} />
 								</div>
 								<div id='animate-target' className={"image-box col-12 col-md-9 col-lg-6"}>
 									{/* card 1 */}
