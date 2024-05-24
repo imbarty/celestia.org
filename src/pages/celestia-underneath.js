@@ -196,7 +196,7 @@ const CelestiaUnderneath = () => {
 															class={heroData.cards[1].button.class}
 															type={heroData.cards[1].button.type}
 															text={heroData.cards[1].button.text}
-															url={heroData.cards[0].button.url}
+															url={heroData.cards[1].button.url}
 														/>
 													</div>
 												</div>

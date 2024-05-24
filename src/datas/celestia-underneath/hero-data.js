@@ -18,7 +18,7 @@ export const heroData = {
 				class: "external",
 				type: "external",
 				text: "Simply deploy",
-				url: "#",
+				url: "/build#build",
 			},
 		},
 		{
@@ -28,7 +28,7 @@ export const heroData = {
 				class: "external",
 				type: "external",
 				text: "Build whatever",
-				url: "#",
+				url: "/build/?framework_category=Sovereign#build",
 			},
 		},
 	],
