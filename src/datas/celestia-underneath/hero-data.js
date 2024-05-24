@@ -13,17 +13,17 @@ export const heroData = {
 	cards: [
 		{
 			title: "Ethereum L2",
-			text: "Deploy fast with an Ethereum L2 using leading rollup frameworks.",
+			text: "Use leading rollup frameworks to deploy an Ethereum L2.",
 			button: {
 				class: "external",
 				type: "external",
-				text: "Build",
+				text: "Simply deploy",
 				url: "#",
 			},
 		},
 		{
 			title: "Sovereign rollup",
-			text: "Transform nearly any VM into its own sovereign chain.",
+			text: "Deploy your own customizable sovereign chain.",
 			button: {
 				class: "external",
 				type: "external",
