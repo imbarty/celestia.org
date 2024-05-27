@@ -18,7 +18,7 @@ export const heroData = {
 				class: "external",
 				type: "external",
 				text: "Simply deploy",
-				url: "/build#build",
+				url: "/build?framework_category=Ethereum#build",
 			},
 		},
 		{
