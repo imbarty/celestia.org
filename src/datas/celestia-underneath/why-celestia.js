@@ -16,7 +16,7 @@ export const whyCelestia = {
 		{
 			title: "Deploy fast",
 			text: `
-            <p>Using a rollups-as-a-service (RaaS) provider, you can one-click deploy a rollup with access to all necessary infrastructure out-of-the-box, like a block explorer, account abstraction, RPCs, and high-uptime sequencing.</p>
+            <p>Using a <a href='https://celestia.org/build/#deploy' target='_blank' rel='noopener noreferrer'>rollups-as-a-service (RaaS) provider</a>, you can one-click deploy a rollup with access to all necessary infrastructure out-of-the-box, like a block explorer, account abstraction, RPCs, and high-uptime sequencing.</p>
             <p>With Celestia underneath, a customizable blockchain becomes as easy to deploy as a smart contract.</p>
             `,
 			image: {
