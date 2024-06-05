@@ -5,7 +5,7 @@ export const dataAvailability = {
     <p>Now, Celestia provides high data throughput that is verifiable for any user through a light node. This is possible because of data availability sampling. As the light node network grows, Celestia can scale to the data throughput needed for millions of rollups without compromising end-user security.</p>
     `,
 	image: {
-		src: "celestia-underneath/celestia-underneath-da-image.png",
+		src: "underneath/celestia-underneath-da-image.png",
 		alt: "From monolithic to modular",
 	},
 	button: {

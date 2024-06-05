@@ -9,7 +9,7 @@ export const whyCelestia = {
             <p>Or deploy with any existing blockchain framework and upgrade as new modular capabilities come online.</p>
             `,
 			image: {
-				src: "celestia-underneath/celestia-underneath-why-celestia-1.png",
+				src: "underneath/celestia-underneath-why-celestia-1.png",
 				alt: "From monolithic to modular",
 			},
 		},
@@ -20,7 +20,7 @@ export const whyCelestia = {
             <p>With Celestia underneath, a customizable blockchain becomes as easy to deploy as a smart contract.</p>
             `,
 			image: {
-				src: "celestia-underneath/celestia-underneath-why-celestia-2.png",
+				src: "underneath/celestia-underneath-why-celestia-2.png",
 				alt: "From monolithic to modular",
 			},
 		},
@@ -31,7 +31,7 @@ export const whyCelestia = {
             <p>Low fees also provide new options to monetize. For example, an app can take a percentage of transaction fees on its own rollup. With these new monetization options, teams can support user growth by subsidizing onboarding costs or eliminating specific user fees.</p>
             `,
 			image: {
-				src: "celestia-underneath/celestia-underneath-why-celestia-3.png",
+				src: "underneath/celestia-underneath-why-celestia-3.png",
 				alt: "From monolithic to modular",
 			},
 		},

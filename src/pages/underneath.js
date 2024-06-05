@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "../components/imageComponent";
 import Button from "../components/buttons/button";
 
-import { heroData } from "../datas/celestia-underneath/hero-data";
-import { fromMonolith } from "../datas/celestia-underneath/from-monolith";
-import { dataAvailability } from "../datas/celestia-underneath/data-availability";
-import { whyCelestia } from "../datas/celestia-underneath/why-celestia";
-import { FooterBoxes2 } from "../datas/celestia-underneath/content";
+import { heroData } from "../datas/underneath/hero-data";
+import { fromMonolith } from "../datas/underneath/from-monolith";
+import { dataAvailability } from "../datas/underneath/data-availability";
+import { whyCelestia } from "../datas/underneath/why-celestia";
+import { FooterBoxes2 } from "../datas/underneath/content";
 
 import Layout from "../components/layout";
 
-import { seoContent } from "../datas/celestia-underneath/seoContent";
+import { seoContent } from "../datas/underneath/seoContent";
 import Seo from "../components/seo";
 
 const CelestiaUnderneath = () => {

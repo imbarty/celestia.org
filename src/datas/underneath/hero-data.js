@@ -7,7 +7,7 @@ export const heroData = {
 	<p>With abundant blockspace and new ways to create apps, you have a blank canvas to build whatever with Celestia underneath.</p>
 	`,
 	image: {
-		src: "celestia-underneath/celestia-underneath-hero.png",
+		src: "underneath/celestia-underneath-hero.png",
 		alt: "Celestia Underneath Hero",
 	},
 	cards: [

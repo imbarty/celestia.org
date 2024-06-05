@@ -6,7 +6,7 @@ export const fromMonolith = {
     <p>Now, Celestia introduces a new modular architecture that makes it easy for anyone to securely launch their own blockchain. Without needing to recruit a committee, you can deploy your own chain with Celestia underneath in just one click.</p>
     `,
 	image: {
-		src: "celestia-underneath/celestia-underneath-from-monolith.png",
+		src: "underneath/celestia-underneath-from-monolith.png",
 		alt: "From monolithic to modular",
 	},
 };
