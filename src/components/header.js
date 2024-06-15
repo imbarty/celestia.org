@@ -11,7 +11,7 @@ const navigation = [
 		type: "internal",
 		submenus: [
 			{
-				text: "Celestia Underneath",
+				text: "Celestia underneath",
 				subtext: "Start here",
 				url: "/underneath/",
 				icon: "menu/logo.svg",
