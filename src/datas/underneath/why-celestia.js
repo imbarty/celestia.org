@@ -4,7 +4,7 @@ export const whyCelestia = {
 		{
 			title: "Blockspace as a canvas",
 			text: `
-            <p>Celestia gets out of the way, so you can customize your application however you like.</p>
+            <p>Celestia sits underneath, so you can customize your application however you like.</p>
             <p>Modify the VM of your chain to unlock novel use cases or higher performance. Building a game? Express any type of game logic as a rollup on Celestia, even fully onchain gameplay.</p>
             <p>Or deploy with any existing blockchain framework and upgrade as new modular capabilities come online.</p>
             `,
