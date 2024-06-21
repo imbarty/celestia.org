@@ -92,7 +92,7 @@ const CelestiaUnderneath = () => {
 							<h1 className={"main"}>{heroData.title}</h1>
 							<div className={"row justify-content-center justify-content-lg-between align-items-start"}>
 								<div className={"text-box col-12 col-lg-5"}>
-									<h2 className={"subtitle"}>{heroData.subtitle}</h2>
+									{/* <h2 className={"subtitle"}>{heroData.subtitle}</h2> */}
 									<div className={"text-slim"} dangerouslySetInnerHTML={{ __html: heroData.description }} />
 								</div>
 								<div id='animate-target' className={"image-box col-12 col-md-9 col-lg-6"}>

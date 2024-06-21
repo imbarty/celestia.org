@@ -83,6 +83,17 @@
 			.text-slim {
 				color: #000;
 				font-weight: 300;
+
+				h3 {
+					font-family: $ruberoid;
+					font-weight: bold;
+					font-size: 40px;
+					line-height: 1.2em;
+					color: #000;
+					@include media-breakpoint-down(sm) {
+						font-size: 24px;
+					}
+				}
 			}
 		}
 		.image-box {

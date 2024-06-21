@@ -2,9 +2,12 @@ export const heroData = {
 	title: "Celestia underneath",
 	subtitle: "Build whatever",
 	description: `
-	<p>Celestia is a modular blockchain specialized in ordering transactions and making their data available (DA). This modular design means Celestia can be plugged into all rollup frameworks or chains to scale any ecosystem.</p>
-	<p>You can deploy in the Ethereum ecosystem with an L2 that taps into Celestia for modular DA. Or launch your own customizable sovereign chain.</p>
-	<p>With abundant blockspace and new ways to create apps, you have a blank canvas to build whatever with Celestia underneath.</p>
+	<h3>Modular</h3>
+	<p>Celestia’s modular design easily plugs into any rollup framework or chain to provide permissionless, high-throughput data availability. With Celestia underneath, deploy an Ethereum L2 in 1-click or transform nearly any VM into your own sovereign blockchain.</p>
+	<h3>Secure</h3>
+	<p>Celestia provides high data throughput that is verifiable for any user through a light node. Light nodes allow anyone to directly verify data availability and interact with Celestia without centralized gateways or RPC providers.</p>
+	<h3>Scale</h3>
+	<p>With low-cost DA and abundant throughput, you have a blank canvas to build whatever with Celestia underneath.</p>
 	`,
 	image: {
 		src: "underneath/celestia-underneath-hero.png",
