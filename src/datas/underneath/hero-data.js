@@ -2,6 +2,7 @@ export const heroData = {
 	title: "Celestia underneath",
 	subtitle: "Build whatever",
 	description: `
+	<p>Celestia is a modular blockchain built to securely scale any ecosystem.</p>
 	<h3>Modular</h3>
 	<p>Celestia’s modular design easily plugs into any rollup framework or chain to provide permissionless, high-throughput data availability. With Celestia underneath, deploy an Ethereum L2 in 1-click or transform nearly any VM into your own sovereign blockchain.</p>
 	<h3>Secure</h3>
