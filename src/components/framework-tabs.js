@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IconCard from "./modules/icon-card";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const FrameworkTabs = ({ content, categories, anchorId, section }) => {
 	const [selectedTab, setSelectedTab] = useState("All");
 
-	const allUniqueCategories = [...new Set(categories.items.flatMap((item) => item.category))];
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			const urlParams = new URLSearchParams(window.location.search);
+			const paramName = section.toLowerCase() + "_category";
+			const categoryFromUrl = urlParams.get(paramName);
+			if (categoryFromUrl && categories.items.some((item) => item.category.includes(categoryFromUrl))) {
+				setSelectedTab(categoryFromUrl);
+			}
+		}
+	}, [section, categories.items]);
 
-	console.log(allUniqueCategories);
+	const allUniqueCategories = [...new Set(categories.items.flatMap((item) => item.category))];
 
 	return (
 		<section className='frameworks' id={`${content.items[anchorId].title.replace(/\s+/g, "-").toLowerCase()}`}>
@@ -20,6 +29,7 @@ const FrameworkTabs = ({ content, categories, anchorId, section }) => {
 					{allUniqueCategories.map(function (category) {
 						return (
 							<div
+								key={category}
 								className={`col-auto tab-item ${selectedTab === category && "active"} plausible-event-name=${category.replace(
 									/\s+/g,
 									"-"
