@@ -142,19 +142,5 @@ module.exports = {
 				timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
 			},
 		},
-		{
-			resolve: "gatsby-plugin-csp",
-			options: {
-				disableOnDev: true,
-				mergeDefaultDirectives: true,
-				mergeScriptHashes: true,
-				directives: {
-					'script-src': `'self' 'unsafe-inline'`,
-					'style-src': `'self' 'unsafe-inline'`,
-					'img-src': `'self'`,
-					'font-src': `'self'`,
-				  },
-			},
-		},
 	],
 };
