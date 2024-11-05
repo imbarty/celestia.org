@@ -1,46 +1,13 @@
-import * as React from "react";
-
-import { FooterBoxes } from "../datas/careers/content";
-import { content } from "../datas/careers/content";
-import Button from "../components/buttons/button";
-import Perk from "../components/modules/perk";
+import React from "react";
 import Layout from "../components/layout";
-// import { graphql, useStaticQuery } from "gatsby";
-
+import { content, FooterBoxes } from "../datas/careers/content";
+import Perk from "../components/modules/perk";
+import Image from "../components/imageComponent";
+import Button from "../components/buttons/button";
 import { seoContent } from "../datas/careers/seoContent";
 import Seo from "../components/seo";
 
 const CareersPage = () => {
-	// const jobs = useStaticQuery(graphql`
-	// 	query MyQuery {
-	// 		allLever {
-	// 			edges {
-	// 				node {
-	// 					id
-	// 					lever_id
-	// 					createdAt
-	// 					text
-	// 					hostedUrl
-	// 					applyUrl
-	// 					categories {
-	// 						commitment
-	// 						location
-	// 						team
-	// 					}
-	// 					description
-	// 					descriptionPlain
-	// 					lists {
-	// 						text
-	// 						content
-	// 					}
-	// 					additional
-	// 					additionalPlain
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// `);
-
 	return (
 		<Layout footerBoxes={FooterBoxes}>
 			<Seo title={seoContent.title} description={seoContent.description} ogTitle={seoContent.ogTitle} image={seoContent.image} />
@@ -60,7 +27,11 @@ const CareersPage = () => {
 								<div className={"row"}>
 									{content.perks.perks.map((perk, index) => (
 										<div className={"col-md-6 pb-5"} key={index}>
-											<Perk title={perk.title} animation={perk.animation} image={perk.image} />
+											<Perk
+												title={perk.title}
+												animation={perk.animation}
+												image={<Image className={"perk-image"} alt={perk.title} filename={perk.image} />}
+											/>
 										</div>
 									))}
 								</div>
