@@ -10,7 +10,7 @@ export const eventData = [
 		location: "Bangkok",
 		category: ["", ""],
 		url: "https://lu.ma/23mphcvd",
-		featured: false,
+		featured: true,
 	},
 	{
 		id: 2,
@@ -23,7 +23,7 @@ export const eventData = [
 		location: "Bangkok",
 		category: ["", ""],
 		url: "https://lu.ma/3elvoqpy",
-		featured: true,
+		featured: false,
 	},
 	{
 		id: 3,
