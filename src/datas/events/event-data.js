@@ -36,7 +36,7 @@ export const eventData = [
 		location: "Bangkok",
 		category: ["", ""],
 		url: "https://lu.ma/2qzkjf9d",
-		featured: true,
+		featured: false,
 	},
 	{
 		id: 4,
@@ -193,6 +193,19 @@ export const eventData = [
 		category: ["", ""],
 		url: "https://lu.ma/rvqi5xev",
 		featured: false,
+	},
+	{
+		id: 19,
+		eventType: "celestia", // celestia, community
+		image: "events/hackathon.png", // use 1200x800px image for cover image (3:2 ratio)
+		title: "Celestia hackathon",
+		description: "",
+		startDate: "Comming soon!",
+		endDate: "",
+		location: "Online",
+		category: ["", ""],
+		url: "#",
+		featured: true,
 	},
 ];
 
